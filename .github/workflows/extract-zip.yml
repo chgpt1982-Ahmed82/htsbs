@@ -1,5 +1,9 @@
 name: Extract ZIP File
 
+permissions:
+  contents: write
+  pull-requests: write
+  
 on:
   workflow_dispatch:
   push:
@@ -13,13 +17,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       
       - name: Extract ZIP file
         run: |
           unzip -o htsbs.zip
           ls -la
       
-      - name: Commit extracted files
+      - name: Commit and push extracted files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
