@@ -1,0 +1,820 @@
+.dashboard-stat-card .card-body{
+    min-height:140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.equal-card{
+    height:100%;
+}
+
+.dashboard-card .card-body{
+    padding:20px;
+}
+
+.dashboard-table-card{
+    height:100%;
+}
+
+.dashboard-table-card .card-body{
+    height:320px;
+    overflow-y:auto;
+}
+
+.dashboard-table-card table{
+    margin-bottom:0;
+}
+
+.mycard{
+    height: 100px;
+}
+
+/* ====================================
+FIXED HEADER
+==================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+
+    z-index:1050;
+
+    height:60px;
+
+    background:#0d6efd !important;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+/* تعويض ارتفاع الهيدر */
+
+body{
+    padding-top:60px;
+}
+
+
+
+/* ====================================
+GENERAL
+==================================== */
+
+*{
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    direction:rtl;
+    text-align:right;
+    font-family:'Cairo',sans-serif;
+}
+
+/* ====================================
+NAVBAR
+==================================== */
+
+.navbar{
+    height:60px;
+    min-height:60px;
+    background:#0d6efd !important;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.navbar-brand{
+    color:#fff !important;
+    font-weight:700;
+}
+
+.navbar span{
+    color:#fff !important;
+}
+
+.navbar-icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+
+.navbar .btn-light{
+    border:none;
+}
+
+
+
+/* ====================================
+CARDS
+==================================== */
+
+.card{
+border:none;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.dashboard-card{
+transition:.3s;
+}
+
+.dashboard-card:hover{
+transform:translateY(-3px);
+}
+
+/* ====================================
+TABLES
+==================================== */
+
+.table{
+background:#fff;
+}
+
+.table thead{
+background:#f1f5f9;
+}
+
+.table-responsive{
+overflow-x:auto;
+}
+
+/* ====================================
+FORMS
+==================================== */
+
+.form-control,
+.form-select{
+
+border-radius:8px;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+box-shadow:none;
+border-color:#6D28D9;
+
+}
+
+/* ==================================
+RTL FORMS
+================================== */
+
+.form-control,
+.form-select,
+textarea,
+input,
+label {
+
+    direction: rtl;
+    text-align: right;
+
+}
+
+.card-header h4{
+    text-align:right;
+}
+
+.card-body{
+    direction:rtl;
+    text-align:center;
+}
+.mycard{
+    
+    height: 260px;
+    
+}
+
+/* ====================================
+BUTTONS
+==================================== */
+
+.btn-primary{
+background:#6D28D9;
+border-color:#6D28D9;
+}
+
+.btn-primary:hover{
+     opacity:.9;
+}
+.btn-success{
+background:#10B981;
+border-color:#10B981;
+}
+
+.btn-danger{
+background:#EF4444;
+border-color:#EF4444;
+}
+
+/* ====================================
+BADGES
+==================================== */
+
+.badge-success{
+background:#10B981;
+}
+
+.badge-danger{
+background:#EF4444;
+}
+
+.badge-warning{
+background:#F59E0B;
+}
+
+/* ====================================
+OFFCANVAS MOBILE
+==================================== */
+
+.offcanvas{
+width:260px;
+}
+
+
+.card{
+margin-bottom:15px;
+}
+
+.table{
+font-size:14px;
+}
+
+h1,h2,h3{
+font-size:1.4rem;
+}
+
+
+
+/* ====================================
+RESPONSIVE
+==================================== */
+
+@media(max-width:991px){
+
+    .student-sidebar,
+    .teacher-sidebar,
+    .admin-sidebar,
+    .parent-sidebar{
+        display:none;
+    }
+
+    .main-content{
+        padding:15px;
+    }
+
+}
+
+/* ====================================
+MOBILE
+==================================== */
+
+@media(max-width:768px){
+
+    .card{
+        margin-bottom:15px;
+    }
+
+    .table{
+        font-size:14px;
+    }
+
+    h1,h2,h3{
+        font-size:1.4rem;
+    }
+
+    /* Offcanvas */
+
+    .offcanvas{
+
+        width:280px !important;
+
+        --bs-offcanvas-bg: transparent;
+
+        background:linear-gradient(
+            180deg,
+            #7C3AED 0%,
+            #6D28D9 50%,
+            #5B21B6 100%
+        ) !important;
+
+        color:#fff !important;
+    }
+
+    .offcanvas-header,
+    .offcanvas-body{
+        background:transparent !important;
+    }
+
+    .offcanvas-title{
+        color:#fff !important;
+        font-weight:700;
+    }
+
+    .offcanvas .btn-close{
+        filter:invert(1);
+    }
+
+    .offcanvas .nav-link{
+
+        display:flex;
+       flex-direction:row-reverse;
+       
+
+        align-items:center; 
+        
+        justify-content:flex-start;
+
+        gap:10px;
+
+        color:#fff !important;
+
+        padding:12px 15px;
+        border-radius:8px;
+        margin-bottom:4px;
+
+        text-align:right;
+    }
+
+    .offcanvas .nav-link i{
+
+        font-size:22px;
+        min-width:24px;
+
+        margin:0 !important;
+    }
+
+    .offcanvas .nav-link:hover{
+        background:rgba(255,255,255,.15);
+    }
+
+    .offcanvas .nav-link.active{
+        background:rgba(255,255,255,.25);
+    }
+
+}
+
+/* ====================================
+HEADER ICON
+==================================== */
+
+.navbar-icon{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    
+
+    border-radius:50%;
+
+    font-size:18px;
+}
+/* ====================================
+STUDENT OFFCANVAS FIX
+==================================== */
+
+#studentSidebar{
+    --bs-offcanvas-bg: #6D28D9 !important;
+    background: linear-gradient(
+        180deg,
+        #7C3AED 0%,
+        #6D28D9 50%,
+        #5B21B6 100%
+    ) !important;
+
+    color:#fff !important;
+}
+
+#studentSidebar .offcanvas-header,
+#studentSidebar .offcanvas-body{
+    background:transparent !important;
+}
+
+#studentSidebar .offcanvas-title{
+    color:#fff !important;
+    font-weight:700;
+}
+
+#studentSidebar .btn-close{
+    filter:invert(1);
+}
+
+#studentSidebar .nav-link i{
+
+    margin:0 !important;
+
+    min-width:auto;
+
+    font-size:22px;
+}
+
+#studentSidebar .nav-link:hover{
+    background:rgba(255,255,255,.15);
+}
+
+#studentSidebar .nav-link.active{
+    background:rgba(255,255,255,.25);
+}
+
+#studentSidebar .nav-link i{
+    font-size:22px;
+    min-width:24px;
+}
+#studentSidebar .offcanvas-body{
+    direction:rtl;
+    text-align:right;
+}
+
+#studentSidebar ul{
+    padding-right:0;
+}
+#studentSidebar .offcanvas-body{
+    direction:rtl;
+    text-align:right;
+}
+
+#studentSidebar ul{
+    padding-right:0;
+}
+
+.student-sidebar .nav-link{
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#fff !important;
+
+    padding:12px 15px;
+
+    text-align:right;
+}
+
+
+/* الأيقونة يمين والنص يسارها */
+.student-sidebar .nav-link,
+.teacher-sidebar .nav-link,
+.admin-sidebar .nav-link,
+.parent-sidebar .nav-link{
+
+    display:flex !important;
+
+    flex-direction:row-reverse !important;
+
+    justify-content:flex-end !important;
+
+    align-items:center !important;
+
+    gap:10px;
+
+    text-align:right;
+}
+/* ---------------------------------
+mobile offcanvas  accordion class
+-------------------------------*/
+.student-mobile-sidebar .accordion-item{
+    margin-bottom:8px;
+    border-radius:10px;
+    overflow:hidden;
+}
+/* Mobile Offcanvas */
+
+.offcanvas.student-mobile-sidebar{
+    background: linear-gradient(
+        180deg,
+        #1f6feb,
+        #6f2bd9
+    ) !important;
+
+    color:#fff;
+}
+
+/* Accordion */
+
+.offcanvas.student-mobile-sidebar .accordion,
+.offcanvas.student-mobile-sidebar .accordion-item,
+.offcanvas.student-mobile-sidebar .accordion-body{
+    background: transparent !important;
+    border:none !important;
+}
+
+/* رؤوس الأقسام */
+
+.offcanvas.student-mobile-sidebar .accordion-button{
+    background: rgba(255,255,255,.12) !important;
+    color:#fff !important;
+    border:none !important;
+}
+
+.offcanvas.student-mobile-sidebar .accordion-button:not(.collapsed){
+    background: rgba(255,255,255,.20) !important;
+    color:#fff !important;
+    box-shadow:none !important;
+}
+
+/* السهم */
+
+.offcanvas.student-mobile-sidebar .accordion-button::after{
+    filter: brightness(0) invert(1);
+}
+
+/* الروابط */
+
+.offcanvas.student-mobile-sidebar .nav-link{
+    color:#fff !important;
+    background: transparent !important;
+}
+
+.offcanvas.student-mobile-sidebar .nav-link:hover{
+    background: rgba(255,255,255,.10) !important;
+}
+/* ===========================
+MOBILE OFFCANVAS
+=========================== */
+
+#studentSidebar .nav-link{
+
+    display:flex !important;
+
+    flex-direction:row-reverse !important;
+
+    justify-content:flex-end !important;
+
+    align-items:center !important;
+
+    gap:10px;
+
+    text-align:right !important;
+
+    width:100%;
+}
+
+#studentSidebar .nav-link i{
+
+    margin:0 !important;
+
+    font-size:22px;
+}
+
+/* عنوان القائمة */
+#studentSidebar .offcanvas-title{
+
+    width:100%;
+
+    text-align:right;
+}
+
+/* محتوى القائمة */
+#studentSidebar .offcanvas-body{
+
+    direction:rtl;
+
+    text-align:right;
+}
+
+/* إلغاء هوامش Bootstrap */
+#studentSidebar ul{
+
+    padding-right:0;
+
+    margin-right:0;
+}
+/* ==========================
+Sidebar Separator
+========================== */
+
+.sidebar-container{
+
+    border-left: 2px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+    -2px 0 8px rgba(0,0,0,0.15);
+
+}
+
+/* خط أوضح في سطح المكتب */
+
+@media (min-width:992px){
+
+    .sidebar-container{
+
+        border-left:3px solid rgba(255,255,255,0.35);
+
+    }
+
+}
+
+
+/* ====================================
+UNIFIED SIDEBAR
+Student / Teacher / Parent / Admin
+==================================== */
+
+.sidebar-fixed{
+    position:fixed;
+    top:60px;
+    right:0;
+    width:240px;
+    height:calc(100vh - 60px);
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+    background:linear-gradient(
+        180deg,
+        #2563EB 0%,
+        #1D4ED8 50%,
+        #1E3A8A 100%
+    );
+
+    border-left:2px solid rgba(255,255,255,.15);
+
+    box-shadow:-3px 0 12px rgba(0,0,0,.15);
+}
+
+/* مساحة المحتوى */
+
+.main-content{
+
+    margin-right:240px;
+
+    width:calc(100% - 240px);
+
+    min-height:calc(100vh - 60px);
+
+    padding:15px;
+
+    direction:rtl;
+
+    text-align:right;
+}
+
+/* جميع أنواع القوائم */
+
+.student-sidebar,
+.teacher-sidebar,
+.admin-sidebar,
+.parent-sidebar{
+
+    min-height:100%;
+
+    direction:rtl;
+
+    text-align:right;
+
+    background:transparent;
+}
+
+/* الروابط */
+
+.student-sidebar .nav-link,
+.teacher-sidebar .nav-link,
+.admin-sidebar .nav-link,
+.parent-sidebar .nav-link{
+
+    display:flex !important;
+
+    flex-direction:row-reverse !important;
+
+    justify-content:flex-end !important;
+
+    align-items:center !important;
+
+    gap:10px;
+
+    color:#fff !important;
+
+    padding:12px 15px;
+
+    margin:3px 6px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.student-sidebar .nav-link:hover,
+.teacher-sidebar .nav-link:hover,
+.admin-sidebar .nav-link:hover,
+.parent-sidebar .nav-link:hover{
+
+    background:rgba(255,255,255,.12);
+}
+
+.student-sidebar .nav-link.active,
+.teacher-sidebar .nav-link.active,
+.admin-sidebar .nav-link.active,
+.parent-sidebar .nav-link.active{
+
+    background:rgba(255,255,255,.22);
+
+    border-right:4px solid #fff;
+
+    font-weight:700;
+}
+
+.student-sidebar .nav-link i,
+.teacher-sidebar .nav-link i,
+.admin-sidebar .nav-link i,
+.parent-sidebar .nav-link i{
+
+    font-size:20px;
+
+    min-width:24px;
+}
+
+/* Accordion */
+
+.student-sidebar .accordion,
+.teacher-sidebar .accordion,
+.admin-sidebar .accordion,
+.parent-sidebar .accordion,
+
+.student-sidebar .accordion-item,
+.teacher-sidebar .accordion-item,
+.admin-sidebar .accordion-item,
+.parent-sidebar .accordion-item,
+
+.student-sidebar .accordion-body,
+.teacher-sidebar .accordion-body,
+.admin-sidebar .accordion-body,
+.parent-sidebar .accordion-body{
+
+    background:transparent !important;
+
+    border:none !important;
+}
+
+.student-sidebar .accordion-button,
+.teacher-sidebar .accordion-button,
+.admin-sidebar .accordion-button,
+.parent-sidebar .accordion-button{
+
+    background:rgba(255,255,255,.08) !important;
+
+    color:#fff !important;
+
+    border:none !important;
+
+    box-shadow:none !important;
+
+    font-weight:600;
+}
+
+.student-sidebar .accordion-button:not(.collapsed),
+.teacher-sidebar .accordion-button:not(.collapsed),
+.admin-sidebar .accordion-button:not(.collapsed),
+.parent-sidebar .accordion-button:not(.collapsed){
+
+    background:rgba(255,255,255,.15) !important;
+}
+
+.student-sidebar .accordion-button::after,
+.teacher-sidebar .accordion-button::after,
+.admin-sidebar .accordion-button::after,
+.parent-sidebar .accordion-button::after{
+
+    filter:brightness(0) invert(1);
+}
+
+/* الجوال */
+
+@media(max-width:991px){
+
+    .sidebar-fixed{
+        display:none !important;
+    }
+
+    .main-content{
+
+        margin-right:0 !important;
+
+        width:100% !important;
+
+        padding:15px;
+    }
+}
+
+
+
+
+
+

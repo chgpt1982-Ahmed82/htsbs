@@ -1,0 +1,60 @@
+:root{
+
+/* Primary */
+--primary:#6D28D9;
+--primary-light:#7C3AED;
+--primary-dark:#5B21B6;
+
+/* Status */
+--success:#10B981;
+--danger:#EF4444;
+--warning:#F59E0B;
+--info:#06B6D4;
+
+/* Gray */
+--dark:#1E293B;
+--gray:#64748B;
+--light:#F8FAFC;
+--white:#FFFFFF;
+
+/* Layout */
+--sidebar-width:240px;
+--navbar-height:60px;
+
+}
+
+/* Global */
+
+body{
+font-family:'Tajawal',sans-serif;
+background:var(--light);
+color:var(--dark);
+}
+
+.dashboard-welcome{
+    border-radius:20px;
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #7C3AED
+    );
+    color:#fff;
+}
+
+.dashboard-welcome p,
+.dashboard-welcome small{
+    color:#fff !important;
+}
+
+.dashboard-card{
+    border-radius:16px;
+    transition:.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-5px);
+}
+
+.dashboard-card h2{
+    font-weight:700;
+}
