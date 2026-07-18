@@ -1,0 +1,28 @@
+name: Extract ZIP File
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'htsbs.zip'
+
+jobs:
+  extract-zip:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Extract ZIP file
+        run: |
+          unzip -o htsbs.zip
+          ls -la
+      
+      - name: Commit extracted files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Extract htsbs.zip contents" || echo "No changes to commit"
+          git push
